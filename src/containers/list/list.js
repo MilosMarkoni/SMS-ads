@@ -22,13 +22,15 @@ class List extends Component {
 	}
 
 	render() {
-		const messages = this.state.data.map((elem, index) => (
-			<SingleMessage
-				key={elem.messageID}
-				indexElem={index}
-				data={elem}
-			></SingleMessage>
-		));
+		const messages = this.state.data
+			.map((elem, index) => (
+				<SingleMessage
+					key={elem.messageID}
+					indexElem={index}
+					data={elem}
+				></SingleMessage>
+			))
+			.reverse();
 
 		return (
 			<div className="ui-main-box">
