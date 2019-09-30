@@ -1,0 +1,28 @@
+.paginationItem {
+	width: 40px;
+	display: inline-block;
+	text-align: center;
+	border: 1px solid #e1e1e1;
+	border-radius: 6px;
+	margin: 3px;
+	padding: 10px 5px;
+	font-weight: 600;
+}
+
+.paginationItem:hover {
+	border-color: #fb0;
+	color: #fb0;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+table {
+	width: 100%;
+}
+
+.paginationWrapper {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
