@@ -1,10 +1,17 @@
 import React from "react";
-import Table from "./containers/list/list";
+import List from "./containers/list/list";
 
 function App() {
 	return (
 		<div className="App">
-			<Table></Table>
+			<main>
+				<List></List>
+
+				<aside className="ui-side-box">Dummy text</aside>
+
+				<p className="clear" />
+			</main>
+			<footer></footer>
 		</div>
 	);
 }

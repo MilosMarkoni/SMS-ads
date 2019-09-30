@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import * as links from "../../links";
-import SingleMessage from "../singleMessage";
+import SingleMessage from "../../components/singleMessage/singleMessage";
 
-class Table extends Component {
+class List extends Component {
 	state = {
 		loading: true,
 		data: []
@@ -22,16 +22,28 @@ class Table extends Component {
 	}
 
 	render() {
-		const messages = this.state.data.map(elem => (
-			<SingleMessage key={elem.messageID} data={elem}></SingleMessage>
+		const messages = this.state.data.map((elem, index) => (
+			<SingleMessage
+				key={elem.messageID}
+				indexElem={index}
+				data={elem}
+			></SingleMessage>
 		));
 
 		return (
-			<div>
-				{this.state.loading ? <div>Loading...</div> : <div>{messages}</div>}
+			<div className="ui-main-box">
+				{this.state.loading ? (
+					<div>Loading...</div>
+				) : (
+					<div>
+						<table>
+							<tbody>{messages}</tbody>
+						</table>
+					</div>
+				)}
 			</div>
 		);
 	}
 }
 
-export default Table;
+export default List;
