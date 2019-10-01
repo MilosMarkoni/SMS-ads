@@ -1,7 +1,12 @@
 import React from "react";
 import * as utils from "../../utils/utils";
 
+// the hook
+import { useTranslation } from "react-i18next";
+
 const SingleMessage = props => {
+	const { t } = useTranslation();
+
 	const { message, sender, dateCreated, statusApproved } = props.data;
 
 	return (
@@ -11,7 +16,7 @@ const SingleMessage = props => {
 				<div className="ui-contant-label">{utils.getTimeDate(dateCreated)}</div>
 				<div className="ui-contant-label">{sender}</div>
 				<div className="ui-contant-label status">
-					{statusApproved ? "Odobreno" : "Nije odobreno"}
+					{statusApproved ? t("Approved") : t("Approved")}
 				</div>
 				<p className="clear" />
 				<div>{message}</div>
