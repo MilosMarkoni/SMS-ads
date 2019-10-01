@@ -7,12 +7,12 @@ import { useTranslation } from "react-i18next";
 const SingleMessage = props => {
 	const { t } = useTranslation();
 
-	const { message, sender, dateCreated, statusApproved } = props.data;
+	const { message, sender, dateCreated, statusApproved, messageCounter } = props.data;
 
 	return (
 		<tr>
 			<td>
-				<div className="ui-contant-label">#{props.indexElem + 1}</div>
+				<div className="ui-contant-label">#{messageCounter}</div>
 				<div className="ui-contant-label">{utils.getTimeDate(dateCreated)}</div>
 				<div className="ui-contant-label">{utils.hidePhoneNumber(sender)}</div>
 
