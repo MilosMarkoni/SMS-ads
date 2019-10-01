@@ -5,7 +5,7 @@ import resources from "./languages/languages";
 
 i18n.use(initReactI18next).init({
 	resources,
-	lng: "en",
+	lng: "sr",
 	interpolation: {
 		escapeValue: false,
 	},

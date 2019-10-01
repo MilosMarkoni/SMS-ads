@@ -3,12 +3,14 @@ import * as links from "../../links";
 import SingleMessage from "../../components/singleMessage/singleMessage";
 import Paginaton from "../pagination/pagination";
 
+import * as utils from "../../utils/utils";
+
 class List extends Component {
 	state = {
 		loading: true,
 		data: [],
 		pageNum: 0,
-		perPage: 5,
+		perPage: 20,
 	};
 
 	componentDidMount() {

@@ -26,3 +26,26 @@ table {
 	margin: 0 auto;
 	text-align: center;
 }
+
+.ui-side-box {
+	height: 100%;
+}
+
+footer {
+	position: sticky;
+	bottom: 0;
+	width: 100%;
+}
+
+main {
+	height: calc(100% - 20px);
+}
+
+.ui-main-box table {
+	margin: 0;
+}
+
+.ui-main-box table td {
+	padding-left: 10px;
+	padding-right: 10px;
+}

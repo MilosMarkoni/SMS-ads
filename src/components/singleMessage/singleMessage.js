@@ -14,9 +14,10 @@ const SingleMessage = props => {
 			<td>
 				<div className="ui-contant-label">#{props.indexElem + 1}</div>
 				<div className="ui-contant-label">{utils.getTimeDate(dateCreated)}</div>
-				<div className="ui-contant-label">{sender}</div>
+				<div className="ui-contant-label">{utils.hidePhoneNumber(sender)}</div>
+
 				<div className="ui-contant-label status">
-					{statusApproved ? t("Approved") : t("Approved")}
+					{statusApproved ? t("Approved") : t("NotApproved")}
 				</div>
 				<p className="clear" />
 				<div>{message}</div>
