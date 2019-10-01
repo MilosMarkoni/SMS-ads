@@ -3,8 +3,6 @@ import * as links from "../../links";
 import SingleMessage from "../../components/singleMessage/singleMessage";
 import Paginaton from "../pagination/pagination";
 
-import * as utils from "../../utils/utils";
-
 class List extends Component {
 	state = {
 		loading: true,
@@ -48,7 +46,9 @@ class List extends Component {
 		return (
 			<div className="ui-main-box">
 				{this.state.loading ? (
-					<div>Loading...</div>
+					<div className="loader">
+						<div className="gif"></div>
+					</div>
 				) : (
 					<div>
 						<table>

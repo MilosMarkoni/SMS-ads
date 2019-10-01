@@ -1,5 +1,6 @@
 import React from "react";
 import List from "./containers/list/list";
+import Header from "./components/header/header";
 
 // the hook
 import { useTranslation } from "react-i18next";
@@ -9,6 +10,7 @@ function App() {
 
 	return (
 		<div className="App">
+			<Header></Header>
 			<main>
 				<List></List>
 
