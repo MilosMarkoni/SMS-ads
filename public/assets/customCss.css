@@ -9,7 +9,8 @@
 	font-weight: 600;
 }
 
-.paginationItem:hover {
+.paginationItem:hover,
+.paginationItem.active {
 	border-color: #fb0;
 	color: #fb0;
 	font-weight: 600;

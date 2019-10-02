@@ -27,6 +27,7 @@ class List extends Component {
 	changePage = pageNumber => {
 		this.setState(prevState => ({
 			...prevState,
+
 			pageNum: Number(pageNumber),
 		}));
 	};
@@ -56,9 +57,11 @@ class List extends Component {
 						</table>
 
 						<Paginaton
+							currentPage={this.state.currentPage}
 							changePage={this.changePage}
 							totalItems={this.state.totalItems}
 							perPage={this.state.perPage}
+							pageNum={this.state.pageNum}
 						></Paginaton>
 					</div>
 				)}

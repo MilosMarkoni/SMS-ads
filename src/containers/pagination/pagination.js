@@ -10,7 +10,11 @@ class Paginaton extends Component {
 
 		for (let i = 0; i < Math.ceil(this.state.totalItems / this.props.perPage); i++) {
 			pageLinks.push(
-				<div className="paginationItem" key={i} onClick={() => this.props.changePage(i)}>
+				<div
+					className={`paginationItem ${this.props.pageNum === i ? "active" : ""}`}
+					key={i}
+					onClick={() => this.props.changePage(i)}
+				>
 					{i + 1}
 				</div>,
 			);
